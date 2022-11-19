@@ -1,0 +1,22 @@
+{{title}}
+
+<div class="container">
+ <div class="row">
+  <div class="col-4" *ngFor="let p of listProdcut">
+    <div class="card" style="width: 18rem;">
+        <img src={{p.picture}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{p.title}}</h5>
+          <h5 class="card-title">Quantity{{p.quantity}</h5>
+          <h5 class="card-title">Price{{p.price}}</h5>
+          <h5 class="card-title">Like{{p.like}}</h5>
+          <button (click)="BuyProduct(p.id)" [disabled]="p.quantity ==0">buy</button>
+          <button (click)="LikeProduct(p.id)">like</button>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card</p>
+        
+        </div>
+      </div>
+ 
+  </div>
+ </div>
+</div>

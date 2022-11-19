@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+
+    <input type="text" name="search" [(ngModel)]="TextSearch">
+    <button (click)="SearchEmploi()">Search</button>
+   <div class="col-4" *ngFor="let item of ListEmploi">
+       <div class="card" style="width: 18rem;">
+         
+           <div class="card-body">
+             <h5 class="card-title">{{item.reference}}</h5>
+             <h5 class="card-title">{{item.titre}}</h5>
+             <h5 class="card-title">{{item.entreprise}}</h5>
+             <h5 class="card-title">{{item.etat}}</h5>
+             <td><button [disabled]="item.etat==false">Postuler</button></td>
+            
+             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card</p>
+              <a href="#" class="btn btn-primary">Go SomeWhere</a>
+           </div>
+         </div>
+    
+    </div>
+<button (click)="Bilan()">Bilan</button>
+
+    </div>
+   </div>
+   
